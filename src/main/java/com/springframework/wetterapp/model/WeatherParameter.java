@@ -3,10 +3,11 @@ package com.springframework.wetterapp.model;
 import java.time.LocalDateTime;
 
 public class WeatherParameter {
-	
-	private  Long cityId;
-	private LocalDateTime dataReceivingTime;
-	private String cityName;
+	// City identification
+	private  Long id;
+	// 	Data receiving time
+	private LocalDateTime dt;
+	private City cityName;
 	private Weather weather;
 
 }
