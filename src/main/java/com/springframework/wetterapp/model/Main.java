@@ -10,30 +10,30 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "main")
-public class Main extends Serializable {
+public class Main implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     //Temperature in (°C, °K and in °F)
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "temperature_id", nullable = false, unique = true)
-    private final Temperature temperature;
+    private Temperature temperature;
     //Humidity in (%)
-    private final float humidity;
+    private float humidity;
     //Minimum temperature at the moment.
     // This is deviation from current temp that is possible for large cities and megalopolises geographically expanded
     // (use these parameter optionally) in (°C, °K and in °F)
-    private final float tempMin;
+    private float tempMin;
     //Maximum temperature at the moment.
     // This is deviation from current temp that is possible for large cities
     // and megalopolises geographically expanded (use these parameter optionally)  in (°C, °K and in °F)
-    private final float tempMax;
+    private float tempMax;
     //Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data) in (hPa)
-    private final float pressure;
+    private float pressure;
     //Atmospheric pressure on the sea level in (hPa)
-    private final float sea_level;
+    private float sea_level;
     //Atmospheric pressure on the ground level in (hPa)
-    private final float grnd_level;
+    private float grnd_level;
 
     public Main() {
 

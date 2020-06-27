@@ -10,12 +10,12 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "clouds")
-public class Clouds extends Serializable {
+public class Clouds implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private final float cloudiness;
+    private float cloudiness;
 
     public Clouds() {
     }

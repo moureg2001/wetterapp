@@ -7,10 +7,10 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Data
+
 @Entity
 @Table(name = "city")
-public class City extends Serializable {
+public @Data class City implements Serializable {
     //City identification
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +18,7 @@ public class City extends Serializable {
     //City name
     private String name;
     //Country code (GB, JP etc.)
-    private String country
+    private String country;
 
     public City() {
     }

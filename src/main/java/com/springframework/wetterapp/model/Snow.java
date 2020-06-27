@@ -8,7 +8,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "snow")
-public class Snow extends Serializable {
+public class Snow implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

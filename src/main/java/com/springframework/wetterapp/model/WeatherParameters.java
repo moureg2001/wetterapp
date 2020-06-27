@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "weatherParameters")
-public class WeatherParameters extends Serializable {
+public class WeatherParameters implements Serializable {
 	// City identification
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

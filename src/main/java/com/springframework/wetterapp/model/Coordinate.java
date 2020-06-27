@@ -11,24 +11,32 @@ import java.time.LocalTime;
 @Data
 @Entity
 @Table(name = "coordinate")
-public class Coordinate extends Serializable {
+public class Coordinate implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private final Long id;
+    private Long id;
     //City geo location, latitude
-    private final float lat,
+    private float lat;
     //City geo location, longitude
-    private final float lon,
+    private float lon;
     //Number of lines returned by this API call
-    private final LocalTime cnt;
+    private LocalTime cnt;
     //Data receiving time
-    private final LocalTime dt;
+    private LocalTime dt;
 
     public Coordinate() {
 
     }
 
     public Coordinate(float lat, float lon, LocalTime cnt, LocalTime dt) {
+        this.lat = lat;
+        this.lon = lon;
+        this.cnt = cnt;
+        this.dt = dt;
+    }
+
+    public Coordinate(Long id, float lat, float lon, LocalTime cnt, LocalTime dt) {
+        this.id = id;
         this.lat = lat;
         this.lon = lon;
         this.cnt = cnt;

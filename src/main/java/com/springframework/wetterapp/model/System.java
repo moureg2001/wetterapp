@@ -9,7 +9,7 @@ import java.time.LocalTime;
 @Data
 @Entity
 @Table(name = "system")
-public class System extends Serializable {
+public class System implements  Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

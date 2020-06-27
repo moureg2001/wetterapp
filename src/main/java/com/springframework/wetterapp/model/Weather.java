@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "weather")
-public class Weather extends Serializable {
+public class Weather implements Serializable {
     //Weather condition id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
